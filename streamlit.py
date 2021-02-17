@@ -45,7 +45,7 @@ def load_latlong():
 	df_latlong['Date'] = pd.to_datetime(df_latlong['Date'])
 
 	# Change lat/lon column names
-	df_latlong(columns={'LATITUDE': 'lat', 'LONGITUDE': 'lon'}, inplace=True)
+	df_latlong.rename(columns={'LATITUDE': 'lat', 'LONGITUDE': 'lon'}, inplace=True)
 
 	return df_latlong
 
@@ -53,18 +53,13 @@ def load_latlong():
 bkln, qns = load_data()
 df_latlong = load_latlong()
 
-if st.checkbox('View All Historical Data'):
-	st.map(df_latlong)
+if st.checkbox('View Historical Data by GPS Coordinates'):
+	dates = pd.date_range(start='2012-07-31', end='2021-01-29')
+	date = st.selectbox('Select Date', dates, 0)
 
-	st.pydeck_chart(pdk.Deck(
-		map_style='mapbox://styles/mapbox/light-v9',
-		initial_view_state=pdk.ViewState(
-			latitude=40.650002,
-			longitude=-73.949997,
-			zoom=10,
-			pitch=0)))
+	st.map(df_latlong[df_latlong['Date']==date])
 
-if st.checkbox('View Specific Date'):
+if st.checkbox('View Specific Borough, Date Detail'):
 	# Borough selection
 	borough = st.selectbox('Select Borough',['Brooklyn','Queens','All'],2)
 
