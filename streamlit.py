@@ -54,10 +54,11 @@ bkln, qns = load_data()
 df_latlong = load_latlong()
 
 if st.checkbox('View Historical Data by GPS Coordinates'):
-	dates = pd.date_range(start='2012-07-31', end='2021-01-29')
-	date = st.selectbox('Select Date', dates, 0)
+	with st.spinner('Loading data...'):
+		dates = pd.date_range(start='2012-07-31', end='2021-01-29')
+		date = st.selectbox('Select Date', dates, 0)
 
-	st.map(df_latlong[df_latlong['Date']==date])
+		st.map(df_latlong[df_latlong['Date']==date])
 
 if st.checkbox('View Specific Borough, Date Detail'):
 	# Borough selection
@@ -65,7 +66,7 @@ if st.checkbox('View Specific Borough, Date Detail'):
 
 	# Date selection
 	# Define date range
-	dates = pd.date_range(start='2012-07-31', end='2022-07-01')
+	dates = pd.date_range(start='2012-07-01', end='2022-07-01')
 	date = st.selectbox('Select Date', dates, 0)
 	st.write('Note: Data through 2021-01-29 is historical. Later accident counts are 	predictions.') 
 
