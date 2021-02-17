@@ -67,14 +67,19 @@ def load_latlong():
 bkln, qns, man = load_data()
 df_latlong = load_latlong()
 
-if st.checkbox('View Historical Data by GPS Coordinates'):
+st.image('./Images/traffic.jpg')
+
+st.write('Known data through January 29, 2021, predicted data through June 30, 2022.')
+
+
+if st.checkbox('View All Historical Data'):
 	with st.spinner('Loading data...'):
 		dates = pd.date_range(start='2012-07-01', end='2021-01-29')
 		date = st.selectbox('Select Date', dates, 0)
 
 		st.map(df_latlong[df_latlong['Date']==date])
 
-if st.checkbox('View Specific Borough, Date Detail'):
+if st.checkbox('View By Borough and Date'):
 	# Borough selection
 	borough = st.selectbox('Select Borough',['Brooklyn','Manhattan', 'Queens','All'],3)
 
@@ -130,5 +135,11 @@ if st.checkbox('View Specific Borough, Date Detail'):
 		if date > pd.to_datetime('2020-1-29'):
 			st.write('The number of car accidents in Queens on this date is predicted to be: ', qns['Accidents'][date])
 		st.line_chart(qns)
+
+
+
+
+st. write('For more information about this project, please visit its GitHub repository: https://github.com/Davida1014/NYC-Car-Accident-Predictor')
+
 
 
