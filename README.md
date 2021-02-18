@@ -98,9 +98,23 @@ I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for 
 
 
 # Recommendations
+For institutions:
+- Increase crash-related resources in time periods with most accidents, for example during the spring.
+- Save resources in time period with fewer accidents, for example on holidays and weekends.
+- Increase crash-related resources in zip codes with most accidents.
 
-
+For individuals:
+If your timing is flexible, avoid hours of peak accident frequency.
+  
 # Next Steps
+- Generate predictions for The Bronx and Staten Island
+- Try other modeling types, such as neural networks
+- Predict number of accidents by zip code
+- Predict number of injuries per borough and zip code
+- Incorporate weather APIs and web-scraping
+- Adjust model as pandemic-related updates occur 
+
+
 # Source Material
 ### Data Source:
 https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
