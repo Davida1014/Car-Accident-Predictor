@@ -11,6 +11,7 @@ def load_data():
 	bkln = pd.read_csv('./Data/data_preds_bkln.csv')
 	qns = pd.read_csv('./Data/data_preds_qns.csv')
 	man = pd.read_csv('./Data/data_preds_man.csv')
+	bx = pd.read_csv('./Data/data_preds_bx.csv')
 
 
 	# Clean data
@@ -24,11 +25,15 @@ def load_data():
 	man['Date'] = pd.to_datetime(man['Unnamed: 0'])
 	man.drop(columns='Unnamed: 0', inplace=True)
 
+	bx['Date'] = pd.to_datetime(bx['Date'])
+
 	bkln.set_index('Date', inplace=True)
 
 	qns.set_index('Date', inplace=True)
 
 	man.set_index('Date', inplace=True)
+
+	bx.set_index('Date', inplace=True)
 
 
 	# Rename accidents column
@@ -38,6 +43,7 @@ def load_data():
 
 	man.rename(columns={'0': 'Accidents'}, inplace=True)
 
+	bx.rename(columns={'0': 'Accidents'}, inplace=True)
 
 	# Convert accidents to integers
 	bkln['Accidents'] = bkln['Accidents'].astype(int)
@@ -45,9 +51,11 @@ def load_data():
 	qns['Accidents'] = qns['Accidents'].astype(int)
 
 	man['Accidents'] = man['Accidents'].astype(int)
+	
+	bx['Accidents'] = bx['Accidents'].astype(int)
 
 
-	return bkln, qns, man
+	return bkln, qns, man, bx
 
 @st.cache
 def load_latlong():
@@ -64,7 +72,7 @@ def load_latlong():
 	return df_latlong
 
 
-bkln, qns, man = load_data()
+bkln, qns, man, bx = load_data()
 df_latlong = load_latlong()
 
 st.image('./Images/traffic.jpg')
@@ -81,7 +89,7 @@ if st.checkbox('View All Historical Data'):
 
 if st.checkbox('View By Borough and Date'):
 	# Borough selection
-	borough = st.selectbox('Select Borough',['Brooklyn','Manhattan', 'Queens','All'],3)
+	borough = st.selectbox('Select Borough',['The Bronx','Brooklyn','Manhattan', 'Queens','All'],4)
 
 	# Date selection
 	# Define date range
@@ -90,6 +98,14 @@ if st.checkbox('View By Borough and Date'):
 	st.write('Note: Data through 2021-01-29 is historical. Later accident counts are 	predictions.') 
 
 	# Output
+	if borough == 'The Bronx':
+		st.subheader('Bronx Data')
+		if date <= pd.to_datetime('2020-1-29'):
+			st.write('The number of car accidents in The Bronx on this date was: ', bx['Accidents'][date])
+		if date > pd.to_datetime('2020-1-29'):
+			st.write('The number of car accidents in The Bronx on this date is 	predicted to be: ', bx['Accidents'][date])
+		st.line_chart(bx)
+
 	if borough == 'Brooklyn':
 		st.subheader('Brooklyn Data')
 		if date <= pd.to_datetime('2020-1-29'):
@@ -115,6 +131,14 @@ if st.checkbox('View By Borough and Date'):
 		st.line_chart(qns)
 
 	if borough == 'All':
+
+		st.subheader('Bronx Data')
+		if date <= pd.to_datetime('2020-1-29'):
+			st.write('The number of car accidents in The Bronx on this date was: ', bx['Accidents'][date])
+		if date > pd.to_datetime('2020-1-29'):
+			st.write('The number of car accidents in The Bronx on this date is 	predicted to be: ', bx['Accidents'][date])
+		st.line_chart(bx)
+
 		st.subheader('Brooklyn Data')
 		if date <= pd.to_datetime('2020-1-29'):
 			st.write('The number of car accidents in Brooklyn on this date was: ', bkln['Accidents'][date])
