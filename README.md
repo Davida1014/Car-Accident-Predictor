@@ -54,3 +54,19 @@ While it is impossible to predict exactly what will happen over the coming month
 # Recommendations
 # Next Steps
 # Source Material
+### Data Source:
+https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
+
+### Sources for COVID-19 Strategy: 
+https://www.cdc.gov/coronavirus/2019-ncov/downloads/covid-data/Consolidated-Forecasts-Incident-Cumulative-Deaths-2021-02-01.pdf
+
+https://covid19.healthdata.org/united-states-of-america?view=total-deaths&tab=trend
+
+https://analytics-tools.shinyapps.io/covid19simulator04/
+
+https://covid19-projections.com/path-to-herd-immunity/
+
+https://www.theatlantic.com/ideas/archive/2020/12/the-2021-post-pandemic-prediction-palooza/617332/
+
+https://www.govtech.com/analytics/Has-COVID-19-Forever-Changed-Rush-Hour-Traffic-Patterns.html
+
