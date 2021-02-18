@@ -68,10 +68,26 @@ All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most su
 
 ![Bkln_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bkln_model.png?raw=true)
 
+### Queens Predictions:
+- RMSE: 26.62
+- RMSE-to-range-ratio: 10%
+
+![Qns_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Qns_model.png?raw=true)
+
+### Manhattan Predictions:
+- RMSE: 19.05
+- RMSE-to-range-ratio: 9%
+
+![Man_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Man_model.png?raw=true)
+
+## Streamlit Dashboard
+I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for public use, with the option to view historical and predicted data by borough and/or date. A demo is included below: 
 
 
 
 # Recommendations
+
+
 # Next Steps
 # Source Material
 ### Data Source:
