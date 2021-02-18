@@ -64,7 +64,6 @@ All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most su
 
 ### Brooklyn Predictions:
 - RMSE: 24.44
-- 
 - RMSE-to-range-ratio: 9%
 
 ![Bkln_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bkln_model.png?raw=true)
