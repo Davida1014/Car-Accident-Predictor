@@ -64,11 +64,11 @@ Mean daily accident frequencies of the ten zip codes with the most car accidents
 ### When Do Accidents Occur?
 Based on the below, we see that accidents are more likely to occur during the week, on non-holidays, and in the spring. Lower accident rates in the winter may be due to fewer people on the road.
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![seasons](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/seasons.png?raw=true)
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![weekday](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/weekday.png?raw=true)
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![holiday](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/holiday.png?raw=true)
 
 
 # Results
