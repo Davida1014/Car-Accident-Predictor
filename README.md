@@ -49,8 +49,29 @@ While it is impossible to predict exactly what will happen over the coming month
 4. Between the end of the current dataset, January 2021, and the time series model starting in July, predictions will be applied linearly as a connection.
 
 # Exploratory Data Analysis
-# Methods
+Viewing borough-specific data in both bar-chart and time-based form shows that Brooklyn and Queens are the boroughs with the most car accidents, and Staten Island with the fewest:
+
+![borough_bar](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_bar.png?raw=true)
+
+![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+
+Mean daily accident frequencies of the ten zip codes with the most car accidents are represented below. Unsurprisingly given its standing in overall borough accidents, Brooklyn is the most-represented borough:
+
+![zipcodes](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/zipcodes.png?raw=true)
+
 # Results
+All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
+
+### Brooklyn Predictions:
+- RMSE: 24.44
+- 
+- RMSE-to-range-ratio: 9%
+
+![Bkln_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bkln_model.png?raw=true)
+
+
+
+
 # Recommendations
 # Next Steps
 # Source Material
