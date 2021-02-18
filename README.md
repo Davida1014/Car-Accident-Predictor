@@ -19,8 +19,34 @@ As we can see in the above visualization of our entire dataset, the COVID-19 pan
 
 ### 1. COVID-19 Projections
 Since car accidents are negatively correlated with COVID cases, looking at COVID case projections can give us insight regarding accident count.
+
 -Numerous models predicta plateau of cumulative COVID deaths by June, with a linear trend until then.
+
 -Numerous models predict approximaely 80% poulation COVID immunity in NYC by June, with a linear trend until then.
+
+### 2. Transportation Projections
+
+Since more accidents occur with more cars on the road, looking at projections relating to traffic patterns and transportation in general will impact our own as well.
+
+-NYC has planned 40% service cuts for its subway and bus service by 2022. It is expected that more people will drive as compared with pre-COVID transportation patterns, but this plan in cuts could also be indicative of fewer people traveling on a daily basis overall.
+
+-There has been a rise in pedestrian streets, which has removed cars from downtown neighborhoods. These are expected to stay indefinitely, and could impact the number of cars on the road in more urban areas of NYC.
+
+### 3. Workforce Projections
+
+As more people return to working in offices, the number of cars on the road will increase.
+
+-77% of office employees are currently working from home at least 1 day per week. 55% expect to continue doing so indefinitely.
+
+-Estimates show that 10-20% of the US workforce could work from home indefinitely.
+
+## The Plan
+While it is impossible to predict exactly what will happen over the coming months, based on the above information the plan to create as accurate an accident count prediction as possible is:
+
+1. The time series model will be based on pre-COVID data.
+2. Predictions will be aplied starting on July 1, 2021.
+3. Predictions based on pre-COVID data will be diminished by 25%.
+4. Between the end of the current dataset, January 2021, and the time series model starting in July, predictions will be applied linearly as a connection.
 
 # Exploratory Data Analysis
 # Methods
