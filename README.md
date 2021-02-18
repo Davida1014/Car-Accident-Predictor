@@ -49,6 +49,8 @@ While it is impossible to predict exactly what will happen over the coming month
 4. Between the end of the current dataset, January 2021, and the time series model starting in July, predictions will be applied linearly as a connection.
 
 # Exploratory Data Analysis
+
+### Where Do Accidents Occur?
 Viewing borough-specific data in both bar-chart and time-based form shows that Brooklyn and Queens are the boroughs with the most car accidents, and Staten Island with the fewest:
 
 ![borough_bar](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_bar.png?raw=true)
@@ -58,6 +60,16 @@ Viewing borough-specific data in both bar-chart and time-based form shows that B
 Mean daily accident frequencies of the ten zip codes with the most car accidents are represented below. Unsurprisingly given its standing in overall borough accidents, Brooklyn is the most-represented borough:
 
 ![zipcodes](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/zipcodes.png?raw=true)
+
+### When Do Accidents Occur?
+Based on the below, we see that accidents are more likely to occur during the week, on non-holidays, and in the spring. Lower accident rates in the winter may be due to fewer people on the road.
+
+![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+
+![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+
+![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+
 
 # Results
 All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
@@ -82,7 +94,7 @@ All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most su
 
 ## Streamlit Dashboard
 I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for public use, with the option to view historical and predicted data by borough and/or date. A demo is included below: 
-
+![streamlit](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/streamlit.gif?raw=true)
 
 
 # Recommendations
