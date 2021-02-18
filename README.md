@@ -64,11 +64,11 @@ Mean daily accident frequencies of the ten zip codes with the most car accidents
 ### When Do Accidents Occur?
 Based on the below, we see that accidents are more likely to occur during the week, on non-holidays, and in the spring. Lower accident rates in the winter may be due to fewer people on the road.
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![seasons](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/seasons.png?raw=true)
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![weekday](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/weekday.png?raw=true)
 
-![borough_line](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/borough_line.png?raw=true)
+![holiday](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/holiday.png?raw=true)
 
 
 # Results
@@ -98,9 +98,23 @@ I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for 
 
 
 # Recommendations
+For institutions:
+- Increase crash-related resources in time periods with most accidents, for example during the spring.
+- Save resources in time period with fewer accidents, for example on holidays and weekends.
+- Increase crash-related resources in zip codes with most accidents.
 
-
+For individuals:
+If your timing is flexible, avoid hours of peak accident frequency.
+  
 # Next Steps
+- Generate predictions for The Bronx and Staten Island
+- Try other modeling types, such as neural networks
+- Predict number of accidents by zip code
+- Predict number of injuries per borough and zip code
+- Incorporate weather APIs and web-scraping
+- Adjust model as pandemic-related updates occur 
+
+
 # Source Material
 ### Data Source:
 https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
