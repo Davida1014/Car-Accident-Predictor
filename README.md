@@ -82,7 +82,7 @@ All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most su
 
 ## Streamlit Dashboard
 I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for public use, with the option to view historical and predicted data by borough and/or date. A demo is included below: 
-
+![streamlit](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/streamlit.gif?raw=true)
 
 
 # Recommendations
