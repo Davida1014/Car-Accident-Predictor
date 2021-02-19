@@ -1,7 +1,8 @@
 # NYC Car Accident Predictor
 ![traffic](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/traffic.jpg?raw=true)
 
-Davida Rosenstrauch
+**Davida Rosenstrauch**
+
 February 2021
 
 # Business Problem
