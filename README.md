@@ -129,11 +129,10 @@ For individuals:
 If your timing is flexible, avoid hours of peak accident frequency.
   
 # Next Steps
-- Generate predictions for The Bronx and Staten Island
 - Try other modeling types, such as neural networks
 - Predict number of accidents by zip code
-- Predict number of injuries per borough and zip code
-- Incorporate weather APIs and web-scraping
+- Predict number of injuries
+- Incorporate weather data
 - Adjust model as pandemic-related updates occur 
 
 
