@@ -48,6 +48,8 @@ While it is impossible to predict exactly what will happen over the coming month
 3. Predictions based on pre-COVID data will be diminished by 25%.
 4. Between the end of the current dataset, January 2021, and the time series model starting in July, predictions will be applied linearly as a connection.
 
+This method was used for all five boroughs, except Staten Island. As we will see, Staten Island's accident data was much less affected by the pandemic than the other boroughs' and is almsost back to pre-COVID numbers. Therefore, I similarly predicted results based on pre-COVID data, but applied them starting on February 28, 2021 and without diminishing them as I did for the other boroughs.
+
 # Exploratory Data Analysis
 
 ### Where Do Accidents Occur?
@@ -72,7 +74,7 @@ Based on the below, we see that accidents are more likely to occur during the we
 
 
 # Results
-All three of the boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
+The first three boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
 
 ### Brooklyn Predictions:
 - RMSE: 24.44
