@@ -74,25 +74,43 @@ Based on the below, we see that accidents are more likely to occur during the we
 
 
 # Results
-The first three boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
+The first three boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. The Bronx performed best with an ARIMA model, also with a 9% RMSE-to-accident-range ratio, and Staten Island performed best with a SARIMAX model, which has a 6% RMSE-to-accident ratio. Details for each model are listed below:
 
 ### Brooklyn Predictions:
+- Facebook Prophet model
 - RMSE: 24.44
 - RMSE-to-range-ratio: 9%
 
 ![Bkln_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bkln_model.png?raw=true)
 
 ### Queens Predictions:
+- Facebook Prophet model
 - RMSE: 26.62
 - RMSE-to-range-ratio: 10%
 
 ![Qns_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Qns_model.png?raw=true)
 
 ### Manhattan Predictions:
+- Facebook Prophet model
 - RMSE: 19.05
 - RMSE-to-range-ratio: 9%
 
 ![Man_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Man_model.png?raw=true)
+
+### Bronx Predictions:
+- ARIMA model
+- RMSE: 18.63
+- RMSE-to-range ratio: 9%
+
+![Bx_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bx_model.png?raw=true)
+
+### Staten Island Predictions:
+- SARIMAX model
+- RMSE: 2.06
+- RMSE-to-range ratio: 6%
+
+![SI_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/SI_model.png?raw=true)
+
 
 ## Streamlit Dashboard
 I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for public use, with the option to view historical and predicted data by borough and/or date. A demo is included below: 
