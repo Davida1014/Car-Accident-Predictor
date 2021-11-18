@@ -1,7 +1,9 @@
 # NYC Car Accident Predictor
 ![traffic](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/traffic.jpg?raw=true)
 
-Davida Rosenstrauch
+**Davida Rosenstrauch**
+
+February 2021
 
 # Business Problem
 Car accidents are one of the leading causes of death and injury in the United States. They also require significant resources from police departments, EMT services, and hospitals. Being able to accurately predict the number of car accidents within a given area on a given day would help individuals assess their level of risk when going out on the road and help these institutions properly prepare and allocate resources.
@@ -74,25 +76,43 @@ Based on the below, we see that accidents are more likely to occur during the we
 
 
 # Results
-The first three boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. Details for each model are listed below:
+The first three boroughs examined, Brooklyn, Queens, and Manhattan, had most success with Facebook Prophet models. All had an RMSE-to-accident-range ratio of 9-10%, indicating that predictions were wrong by an average of 9-10% of total accident range. The Bronx performed best with an ARIMA model, also with a 9% RMSE-to-accident-range ratio, and Staten Island performed best with a SARIMAX model, which has a 6% RMSE-to-accident ratio. Details for each model are listed below:
 
 ### Brooklyn Predictions:
+- Facebook Prophet model
 - RMSE: 24.44
 - RMSE-to-range-ratio: 9%
 
 ![Bkln_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bkln_model.png?raw=true)
 
 ### Queens Predictions:
+- Facebook Prophet model
 - RMSE: 26.62
 - RMSE-to-range-ratio: 10%
 
 ![Qns_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Qns_model.png?raw=true)
 
 ### Manhattan Predictions:
+- Facebook Prophet model
 - RMSE: 19.05
 - RMSE-to-range-ratio: 9%
 
 ![Man_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Man_model.png?raw=true)
+
+### Bronx Predictions:
+- ARIMA model
+- RMSE: 18.63
+- RMSE-to-range ratio: 9%
+
+![Bx_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/Bx_model.png?raw=true)
+
+### Staten Island Predictions:
+- SARIMAX model
+- RMSE: 2.06
+- RMSE-to-range ratio: 6%
+
+![SI_model](https://github.com/Davida1014/NYC-Car-Accident-Predictor/blob/main/Images/SI_model.png?raw=true)
+
 
 ## Streamlit Dashboard
 I created a user-friendly [Streamlit dashboard](http://192.168.0.11:8501/.) for public use, with the option to view historical and predicted data by borough and/or date. A demo is included below: 
@@ -109,11 +129,10 @@ For individuals:
 If your timing is flexible, avoid hours of peak accident frequency.
   
 # Next Steps
-- Generate predictions for The Bronx and Staten Island
 - Try other modeling types, such as neural networks
 - Predict number of accidents by zip code
-- Predict number of injuries per borough and zip code
-- Incorporate weather APIs and web-scraping
+- Predict number of injuries
+- Incorporate weather data
 - Adjust model as pandemic-related updates occur 
 
 
